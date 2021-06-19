@@ -1,0 +1,8 @@
+.l-vision {
+  @include mq(o-sp) {
+    padding: 112px 0 140px;
+  }
+  @include mq(u-sp) {
+    padding: 50px 0 35px;
+  }
+}

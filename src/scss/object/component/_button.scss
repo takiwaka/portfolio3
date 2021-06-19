@@ -1,0 +1,17 @@
+.c-button {
+  border: 1px solid #b0b0b0;
+  border-radius: 30px;
+  font-size: 14px;
+  margin: 0 auto;
+  text-align: center;
+  display: block;
+  color: #000;
+  @include mq(o-sp) {
+    width: 285px;
+    padding: 20px 0 19px;
+  }
+  @include mq(u-sp) {
+    width: 250px;
+    padding: 16px 0;
+  }
+}

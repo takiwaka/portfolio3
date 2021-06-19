@@ -1,0 +1,148 @@
+.l-header {
+  @include mq(o-sp) {
+  }
+  @include mq(u-sp) {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    min-width: auto;
+    padding: 0;
+  }
+
+  &__inner {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__logo {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      width: 100%;
+      height: 14.4vw;
+      min-height: auto;
+      margin: 0;
+      padding: 1.33333vw 17.33333vw 1.33333vw 2.4vw;
+      background: #fff;
+    }
+    img {
+      width: 35.5vw;
+      max-width: 300px;
+      max-height: 11.5vw;
+    }
+  }
+
+  &__search {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      position: fixed;
+      top: 1.8666666vw;
+      right: 15.5vw;
+      display: block;
+      width: 9vw;
+      height: 9vw;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__navWrap {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      display: block;
+    }
+  }
+
+  &__hamburger {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      height: 9vw;
+      position: fixed;
+      right: 2.6666666vw;
+      top: 1.8666666vw;
+      width: 9vw;
+    }
+  }
+
+  &__hamburger--open {
+    @include mq(u-sp) {
+      display: block;
+      &.is-open {
+        display: none;
+      }
+    }
+  }
+
+  &__hamburger--close {
+    @include mq(u-sp) {
+      display: none;
+      &.is-open {
+        display: block;
+      }
+    }
+  }
+
+  &__nav {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      background: rgba(25, 167, 142, 0.9);
+      display: block;
+      left: 0;
+      margin: 0 auto;
+      padding: 0;
+      position: fixed;
+      right: 0;
+      top: 14.4vw;
+      width: 100%;
+    }
+    &.is-open{
+      display: none;
+    }
+  }
+
+  &__listItem {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      height: auto;
+    }
+  }
+
+  &__listLink {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      color: #fff;
+      display: block;
+      font-size: 4.5vw;
+      letter-spacing: 0.1vw;
+      max-width: 100%;
+      padding: 3.33333vw 4vw 3.33333vw 13.33333vw;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        background: url("#{$bgPath}icon-arrow.png") no-repeat;
+        background-size: 4.8vw 5vw;
+        content: "";
+        height: 5vw;
+        left: 5.33333333vw;
+        position: absolute;
+        top: calc(50% - 2.5vw);
+        width: 4.8vw;
+      }
+    }
+  }
+}
