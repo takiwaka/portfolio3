@@ -7,6 +7,7 @@ $(function () {
     return false;
   });
   $(".jsc-toggle-button-sub").on("click", function () {
+    $(".l-header__listLink--first").toggleClass("is-open");
     $(".jsc-nav-wrap-sub").slideToggle();
     return false;
   });

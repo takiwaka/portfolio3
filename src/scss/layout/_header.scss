@@ -145,11 +145,28 @@
       }
     }
   }
+
   &__subList {
     @include mq(o-sp) {
     }
     @include mq(u-sp) {
-display: none;
+      display: none;
+    }
+  }
+
+  &__listLink--first {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      background: url("#{$bgPath}icon-hamburger-white.png") no-repeat right
+        3.2vw center;
+      background-size: 6vw;
+      padding-right: 16vw;
+      &.is-open {
+        background: url("#{$bgPath}icon-close-white.png") no-repeat right 3.2vw
+          center;
+          background-size: 6vw;
+      }
     }
   }
 }
