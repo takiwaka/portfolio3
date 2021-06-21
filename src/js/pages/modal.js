@@ -19,9 +19,9 @@ $(function () {
   $slick
     .slick({
       prevArrow:
-        '<img src="assets/image/img-model-arrow-prev.png" class="p-modal__arrow p-modal__arrow--prev">',
+        '<img src="assets/image/icon-prev.png" class="p-modal__arrow p-modal__arrow--prev">',
       nextArrow:
-        '<img src="assets/image/img-model-arrow-next.png" class="p-modal__arrow p-modal__arrow--next">',
+        '<img src="assets/image/icon-next.png" class="p-modal__arrow p-modal__arrow--next">',
       dots: true,
       dotsClass: "p-modal__dots",
     })

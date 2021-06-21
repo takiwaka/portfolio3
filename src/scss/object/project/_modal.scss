@@ -1,3 +1,39 @@
 .p-modal {
+  @include mq(o-sp) {
+  }
+  @include mq(u-sp) {
+    margin-top: 14vw;
+  }
 
+  &__arrow {
+    @include mq(o-sp) {
+      position: absolute;
+      top: 62%;
+      width: 36px;
+      cursor: pointer;
+    }
+    @include mq(u-sp) {
+      position: absolute;
+      bottom: 35px;
+      width: 18px;
+    }
+    &--prev {
+      @include mq(o-sp) {
+        left: 36px;
+      }
+      @include mq(u-sp) {
+        left: 50%;
+        margin-left: -58px;
+      }
+    }
+    &--next {
+      @include mq(o-sp) {
+        right: 36px;
+      }
+      @include mq(u-sp) {
+        right: 50%;
+        margin-right: -58px;
+      }
+    }
+  }
 }
