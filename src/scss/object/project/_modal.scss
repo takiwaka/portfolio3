@@ -1,38 +1,140 @@
 .p-modal {
-  @include mq(o-sp) {
-  }
+  position: relative;
+  background-color: #fff;
   @include mq(u-sp) {
-    margin-top: 14vw;
+
   }
 
-  &__arrow {
+  &__contents {
     @include mq(o-sp) {
-      position: absolute;
-      top: 62%;
-      width: 36px;
-      cursor: pointer;
+      top: -150px;
+      margin: 0 auto;
+      padding: 0 70px;
+    }
+  }
+
+  &__list {
+      position: relative;
+  }
+
+  &__textBox {
+    @include mq(o-sp) {
+
+    }
+    @include mq(u-sp) {
+position: absolute;
+bottom: 10vW;
+    }
+  }
+
+  &__text {
+    opacity: 0;
+    transition: all 2s;
+    &.is-active {
+      opacity: 1;
+    }
+
+    @include mq(o-sp) {
+      max-width: 675px;
+      margin-top: 140px;
+      font-size: 14px;
+      line-height: 2;
+    }
+
+    @include mq(u-sp) {
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+  }
+
+  &__name {
+    overflow: hidden;
+    z-index: 1;
+    font-family: Nobel;
+    font-size: 11vw;
+    line-height: 1;
+    white-space: nowrap;
+    @include mq(o-sp) {
+      letter-spacing: -9px;
     }
     @include mq(u-sp) {
       position: absolute;
-      bottom: 35px;
-      width: 18px;
+      overflow: hidden;
     }
-    &--prev {
-      @include mq(o-sp) {
-        left: 36px;
-      }
-      @include mq(u-sp) {
-        left: 50%;
-        margin-left: -58px;
-      }
+  }
+
+  &__character {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(200px);
+    &:first-child {
+      transition: opacity 2s, transform 1s ease 0.2s;
     }
-    &--next {
-      @include mq(o-sp) {
-        right: 36px;
+    &:nth-child(2) {
+      transition: opacity 2s, transform 1s ease 0.3s;
+    }
+    &:nth-child(3) {
+      transition: opacity 2s, transform 1s ease 0.4s;
+    }
+    &:nth-child(4) {
+      transition: opacity 2s, transform 1s ease 0.5s;
+    }
+    &:nth-child(5) {
+      transition: opacity 2s, transform 1s ease 0.6s;
+    }
+    &:nth-child(6) {
+      transition: opacity 2s, transform 1s ease 0.7s;
+    }
+    &.is-active {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  &__imageBox {
+    margin-top: 10vh;
+  }
+
+  &__image {
+    opacity: 0;
+    transition: all 2s;
+    &.is-active {
+      opacity: 1;
+    }
+  }
+
+
+
+  &__dots {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    @include mq(o-sp) {
+      width: calc(100% - 220px);
+      margin: 50px auto 0;
+    }
+    @include mq(u-sp) {
+      margin-top: 20px;
+    }
+
+    li {
+      position: relative;
+      width: 100%;
+      background-color: #fff;
+      &.slick-active {
+        background-color: #424242;
       }
-      @include mq(u-sp) {
-        right: 50%;
-        margin-right: -58px;
+
+      button {
+        position: absolute;
+        width: 100%;
+        border: none;
+        background-color: transparent;
+        text-indent: -9999px;
+        cursor: pointer;
+        outline: none;
+        appearance: none;
       }
     }
   }

@@ -10,25 +10,26 @@ $(function () {
     var slide = ".slick-slide";
     $slick
       .find(slide)
-      .eq(slick.currentSlide + 1)
+      .eq(slick.currentSlide)
       .find(".jsc-modal")
-      .addClass("jsc-scroll")
+      .addClass("jsc-load")
       .removeClass("jsc-modal");
   });
 
   $slick
     .slick({
-      prevArrow:
-        '<img src="assets/image/icon-prev.png" class="p-modal__arrow p-modal__arrow--prev">',
-      nextArrow:
-        '<img src="assets/image/icon-next.png" class="p-modal__arrow p-modal__arrow--next">',
+      // autoplay: true,
+      // autoplaySpeed: 5000,
+      // speed:1000,
+      arrows: false,
       dots: true,
       dotsClass: "p-modal__dots",
+      infinite:false,
     })
     .on("afterChange", function (event, slick, currentSlide) {
       $slick
         .find(".slick-slide")
-        .eq(currentSlide + 1)
+        .eq(currentSlide)
         .find(".jsc-modal")
         .addClass("is-active");
     });

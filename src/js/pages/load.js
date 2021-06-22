@@ -1,5 +1,5 @@
 import $ from "jquery";
 
 $(function () {
-  $(".jsc-load").addClass("is-loaded");
+  $(".jsc-load").addClass("is-active");
 });
