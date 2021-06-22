@@ -1,2 +1,3 @@
 # portfolio3<br>
-ポートは8082
+ポート 8082<br>
+/node_modulesについてはgitnore
