@@ -1,5 +1,5 @@
 // breakpoint
-$breakSP: 480;
+$breakSP: 500;
 $breakPC: 950;
 $breakpoints: (
   "u-sp": "print, screen and (max-width: #{$breakSP}px)",
