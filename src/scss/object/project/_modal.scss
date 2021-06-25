@@ -2,7 +2,6 @@
   position: relative;
   background-color: #fff;
   @include mq(u-sp) {
-
   }
 
   &__contents {
@@ -11,19 +10,22 @@
       margin: 0 auto;
       padding: 0 70px;
     }
+    @include mq(u-sp) {
+      .slick-dotted.slick-slider {
+        margin-bottom: 30px;
+      }
+    }
   }
-
   &__list {
-      position: relative;
+    position: relative;
   }
 
   &__textBox {
     @include mq(o-sp) {
-
     }
     @include mq(u-sp) {
-position: absolute;
-bottom: 10vW;
+      position: absolute;
+      bottom: 10vw;
     }
   }
 
@@ -120,21 +122,20 @@ bottom: 10vW;
       position: relative;
       width: 100%;
       &::after {
-      position: absolute;
-      top: -25px;
-      right: 0px;
-      width: 20px;
-      height: 25px;
-      background-image: url("#{$bgPath}dot-black.png");
-      content: "";
-      background-size: contain;
-      background-repeat: no-repeat;
+        position: absolute;
+        top: -25px;
+        right: 0px;
+        width: 20px;
+        height: 25px;
+        background-image: url("#{$bgPath}dot-black.png");
+        content: "";
+        background-size: contain;
+        background-repeat: no-repeat;
       }
       &.slick-active {
         &::after {
           background-image: url("#{$bgPath}dot-yellow.png");
-
-          }
+        }
       }
 
       button {
