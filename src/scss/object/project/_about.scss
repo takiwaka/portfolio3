@@ -1,9 +1,35 @@
-.p-story {
+.p-about {
   @include mq(o-sp) {
-
   }
   @include mq(u-sp) {
-
+    height: 90vh;
+    padding: 0 0 3vw;
+    position: relative;
+    display: block;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-clip: content-box;
+    background-size: cover;
   }
+
+  &__inner{
+background-image: url("#{$bgPath}img-about.jpg");
+position: absolute;
+bottom: 8vw;
+width: 100%;
+height: 100%;
+padding: 0 0 5rem;
+background-position: top;
+background-size: cover;
+  }
+
+&__title{
+  position: absolute;
+  bottom: 4rem;
+  left: 0;
+  margin-left: 1rem;
+}
+
 
 }
