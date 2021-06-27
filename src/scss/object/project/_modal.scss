@@ -11,9 +11,7 @@
       padding: 0 70px;
     }
     @include mq(u-sp) {
-      .slick-dotted.slick-slider {
-        margin-bottom: 30px;
-      }
+      line-height: 0;//slickの下の余白を消すおまじない
     }
   }
   &__list {
@@ -25,7 +23,8 @@
     }
     @include mq(u-sp) {
       position: absolute;
-      bottom: 10vw;
+      top: 10vw;
+      color: #fff;
     }
   }
 
@@ -95,7 +94,7 @@
   }
 
   &__imageBox {
-    margin-top: 10vh;
+    margin-top: 14vw;
   }
 
   &__image {
