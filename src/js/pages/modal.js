@@ -24,7 +24,7 @@ $(function () {
       arrows: false,
       dots: true,
       dotsClass: "p-modal__dots",
-      infinite:false,
+      infinite: false,
     })
     .on("afterChange", function (event, slick, currentSlide) {
       $slick

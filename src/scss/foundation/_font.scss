@@ -33,6 +33,26 @@
   font-weight: normal;
   src: url("../../assets/fonts/Noway-Thin.otf");
 }
+@font-face {
+  font-family: "Oswald-bold";
+  font-weight: bold;
+  src: url("../../public/assets/fonts/Oswald-Bold.ttf");
+}
+@font-face {
+  font-family: "Bebas-Neue";
+  font-weight: 400;
+  src: url("../../public/assets/fonts/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "NotoSansJP-Thin";
+  font-weight: thin;
+  src: url("../../public/assets/fonts/NotoSansJP-Thin.otf");
+}
+@font-face {
+  font-family: "themify";
+  font-weight: normal;
+  src: url("../../public/assets/fonts/themify.woff");
+}
 
 body {
   font-family: Hiragino Sans, "ヒラギノ角ゴシック", Hiragino Kaku Gothic ProN,

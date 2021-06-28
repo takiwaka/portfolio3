@@ -11,7 +11,7 @@
       padding: 0 70px;
     }
     @include mq(u-sp) {
-      line-height: 0;//slickの下の余白を消すおまじない
+      line-height: 0; //slickの下の余白を消すおまじない
     }
   }
   &__list {
@@ -52,7 +52,7 @@
   &__name {
     overflow: hidden;
     z-index: 1;
-    font-family: Nobel;
+    font-family: "NotoSansJP-Thin";
     font-size: 11vw;
     line-height: 1;
     white-space: nowrap;
@@ -122,7 +122,7 @@
       width: 100%;
       &::after {
         position: absolute;
-        top: -25px;
+bottom: 10px;
         right: 0px;
         width: 20px;
         height: 25px;
