@@ -103,7 +103,7 @@ module.exports = (env, argv) => {
                 sourceMap: true,
                 plugins: [
                   require('cssnano')({
-                    preset: 'default',
+                    preset: ['default', {minifyFontValues: {removeQuotes: false}}],
                   }),
                   require('autoprefixer')({
                     grid: true
