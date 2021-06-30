@@ -134,6 +134,8 @@
     }
     @include mq(u-sp) {
       display: none;
+      font-family: "Noway-Light";
+      font-weight: normal;
     }
   }
 

@@ -14,15 +14,13 @@
 
   &::after {
     display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f061";
+    content: "";
     font-size: 0.5em;
     line-height: 1;
     overflow: hidden;
     width: 0;
     transition: transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s,
-      width 0.15s ease-out 0.05s;
+    width 0.15s ease-out 0.05s;
     transform: translateX(-50%);
     transform-origin: left center;
     text-align: right;
@@ -38,30 +36,6 @@
       transform: translateX(0);
       opacity: 1;
     }
-  }
-
-  @include mq(o-sp) {
-    width: 285px;
-    padding: 20px 0 19px;
-  }
-  @include mq(u-sp) {
-    width: 250px;
-    padding: 16px 0;
-    top: calc(100% + 2rem);
-    padding: 4%;
-  }
-}
-
-.awesome {
-  font-size: 2.15vw;
-  position: relative;
-  color: $colorLight;
-  background: #000;
-
-  &::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f061";
   }
 
   @include mq(o-sp) {
