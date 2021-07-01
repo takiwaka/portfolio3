@@ -1,7 +1,7 @@
 import 'slick-carousel';
 import modal from '../pages/modal'
 import toggle from '../pages/toggle'
-import footer from '../pages/footer'
+import pop from '../pages/pop'
 import load from '../pages/load'
 import scroll from '../pages/scroll'
 
@@ -22,8 +22,8 @@ export default class Router {
       case '/toggle':
         new toggle()
         break
-      case '/footer':
-        new footer()
+      case '/pop':
+        new pop()
         break
       case '/load':
         new load()

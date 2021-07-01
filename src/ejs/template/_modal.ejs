@@ -1,8 +1,6 @@
 <% var array=[
+  {'name':'KAZUYA','text':'のんびり今を生きています。','modalImage':'modal-01',},
   {'name':'KAWAKITA','text':'のんびり今を生きています。','modalImage':'modal-01',},
-  {'name':'見本紹介','text':'のんびり今を生きています。','modalImage':'modal-01',},
-  {'name':'見本紹介','text':'のんびり今を生きています。','modalImage':'modal-01',},
-  {'name':'見本紹介','text':'のんびり今を生きています。','modalImage':'modal-01',},
 ];%>
 
 <div class="p-modal">
@@ -14,7 +12,6 @@
           src="assets/image/<%= array[key].modalImage %>.jpg" alt="">
       </div>
       <div class="p-modal__textBox">
-        <p class="p-modal__text jsc-modal"><%- array[key].text %></p>
         <p class="p-modal__name">
           <span class="p-modal__character jsc-modal">
             <%= name.charAt(0) %>

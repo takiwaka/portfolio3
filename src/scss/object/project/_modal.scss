@@ -23,36 +23,15 @@
     }
     @include mq(u-sp) {
       position: absolute;
-      top: 10vw;
-      color: #fff;
-    }
-  }
-
-  &__text {
-    opacity: 0;
-    transition: all 2s;
-    &.is-active {
-      opacity: 1;
-    }
-
-    @include mq(o-sp) {
-      max-width: 675px;
-      margin-top: 140px;
-      font-size: 14px;
-      line-height: 2;
-    }
-
-    @include mq(u-sp) {
-      margin-top: 20px;
-      font-size: 12px;
-      line-height: 1.8;
+      bottom: 30%;
+      color: #000;
     }
   }
 
   &__name {
     overflow: hidden;
     z-index: 1;
-    font-family: "NotoSansJP-Thin";
+    font-family: 'Noto Sans JP';
     font-size: 11vw;
     line-height: 1;
     white-space: nowrap;
