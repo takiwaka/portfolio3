@@ -1,10 +1,214 @@
 .p-contact {
+  background-color: #efefef;
 
-  @include mq(o-sp) {
-
+  &__wrapper {
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    min-height: 1264px;
+    margin: 0 auto;
+    text-align: center;
   }
-  @include mq(u-sp) {
 
+  &__content {
+    background-color: #fff;
+    height: auto;
+    min-height: 912px;
+    padding-top: 52px;
   }
 
+  &__input {
+  }
+
+  &__inputTitle {
+    height: 60px;
+    font-size: 18px;
+    line-height: 60px;
+    font-weight: bold;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  &__required {
+    position: relative;
+    &::before {
+      width: 40px;
+      height: 23px;
+      position: absolute;
+      content: "必須";
+      left: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #e81919;
+      color: #ffffff;
+      font-size: 14px;
+      line-height: 23px;
+      border-radius: 12px;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    max-width: 528px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #707070;
+    border-radius: 0;
+    color: inherit;
+    font-family: inherit;
+    font-size: 16px;
+    height: 30px;
+
+    &::placeholder {
+      font-weight: regular;
+      color: #cccccc;
+    }
+  }
+
+  &__select {
+    color: #cccccc;
+  }
+
+  &__textarea {
+    height: 240px;
+  }
+
+  &__radio {
+    display: none;
+    font-weight: regular;
+  }
+
+  &__radio + span {
+    //input-radioの直後のspanを指定
+    cursor: pointer; //カーソルを指にするやつ
+    display: inline-block; //要素の並び方はinline的で、要素の中身はblock的な性質を持ちます。
+    margin: 50px 2em 0;
+    padding: 0 0 0 1.2em;
+    position: relative; //自身の位置を元いた場所から相対的な場所に指定する（ここでは子要素の開始位置を決めるために書いてある）
+  }
+
+  &__radio + span::before {
+    background: #ffffff;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    content: ""; //擬似要素の内容を書く。今回は枠だけ使いたいから空白
+    display: block;
+    position: absolute; //自身の位置を左上からの絶対距離で指定する（親にrelativeがついてるので親の左上からスタート
+    left: -15px; //親枠の左上を起点として左に15px
+    top: 50%; //親枠の左上を起点として下に移動（親枠上下の中央に子の起点が来る）
+    transform: translateY(
+      -50%
+    ); //子が枠の半分だけ上に戻る（子上下の中央が親上下の中央に来る）
+    height: 30px;
+    width: 30px;
+  }
+
+  &__radio + span::after {
+    background: #000;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    content: "";
+    height: 18px;
+    left: -9px;
+    opacity: 0;
+    // margin: 2px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease 0s;
+    width: 18px;
+  }
+
+  &__radio:checked + span::after {
+    opacity: 1;
+  }
+
+  .check {
+    margin-top: 45px;
+  }
+
+  .input-check {
+    display: none;
+  }
+
+  .input-check + span {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 0;
+    padding: 0 0 0;
+    position: relative;
+    a {
+      border-bottom: 1px solid #333333;
+    }
+  }
+
+  .input-check + span::before {
+    -webkit-transform: translateY(-50%);
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 2px;
+    content: "";
+    display: block;
+    left: -50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+  }
+
+  .input-check + span::after {
+    -webkit-transform: translateY(-50%);
+    content: url("../image/check.svg");
+    display: none;
+    position: absolute;
+    left: -48px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease 0s;
+  }
+
+  .input-check:checked + span::after {
+    display: block;
+  }
+
+  .btn {
+    margin-top: 3rem;
+    width: 100%;
+    a {
+      font-weight: bold;
+      font-size: 20px;
+      color: #ffffff;
+      background-color: #000;
+      padding: 15px 87px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    a:after {
+      position: absolute;
+      content: "\f054";
+      font-family: "Font Awesome 5 Free";
+      font-size: 20px;
+      top: auto;
+      right: auto;
+      left: auto;
+      bottom: auto;
+      padding-left: 2rem;
+    }
+  }
+}
+
+@media all and (min-width: 480px) {
+}
+
+@media all and (min-width: 768px) {
+  .contact-wrapper {
+    .container {
+      min-height: 1264px;
+    }
+  }
 }

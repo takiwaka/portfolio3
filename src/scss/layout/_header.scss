@@ -15,19 +15,20 @@
     @include mq(o-sp) {
     }
     @include mq(u-sp) {
+      position: relative;
       display: block;
       width: 100%;
       height: auto;
     }
   }
 
-  &__description{
+  &__description {
     font-size: 1rem;
     overflow: hidden;
     width: 100%;
     height: 17px;
     padding: 0 20px;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
     color: #efefef;
     line-height: 17px;
 
@@ -36,7 +37,6 @@
     }
 
     @include mq(o-sp) {
-
     }
     @include mq(u-sp) {
       font-size: 10px;
@@ -80,7 +80,7 @@
     }
     @include mq(u-sp) {
       height: 10vw;
-      position: fixed;
+      position: absolute;
       right: 2.5vw;
       top: 2vw;
       width: 10vw;
@@ -110,8 +110,8 @@
     }
     @include mq(u-sp) {
       display: none;
-      position: fixed;
-      top: 14vw;
+      position: absolute;
+      bottom: -1;
       right: 0;
       left: 0;
       width: 100%;

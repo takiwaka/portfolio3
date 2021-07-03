@@ -78,6 +78,8 @@
 
   &__image {
     opacity: 0;
+    height: 80vh;
+    object-fit: cover;
     transition: all 2s;
     &.is-active {
       opacity: 1;
