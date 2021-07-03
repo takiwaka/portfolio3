@@ -1,9 +1,12 @@
 import $ from "jquery";
 $(function () {
+
   $(".jsc-pop-button").on("click", function () {
-    $(".c-pop").fadeIn();
+    var $popContent = $(".jsc-pop-content");
+    $(this).next($popContent).fadeIn();
   });
-  $(".js-pop-close").on("click", function () {
-    $(".c-pop").fadeOut();
+
+  $(".jsc-pop-close").on("click", function () {
+    $(".jsc-pop-content").fadeOut();
   });
 });
