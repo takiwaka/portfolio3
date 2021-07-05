@@ -39,6 +39,10 @@
   &__inner {
     @include mq(o-sp) {
       display: flex;
+      flex-direction: row;
+      padding: 0;
+      flex-wrap: wrap;
+      justify-content: stretch;
     }
     @include mq(u-sp) {
       position: relative;
@@ -56,7 +60,6 @@
       height: 100%;
       min-height: auto;
       margin: 0;
-      padding: 1.5vw 17vw 1.5vw 2.5vw;
       background: #000;
     }
     img {
@@ -128,6 +131,14 @@
   }
 
   &__listItem {
+    @include mq(o-sp) {
+      font-size: 1.2rem;
+      display: flex;
+      margin-right: 2.5%;
+      padding: 1rem;
+      justify-content: center;
+      align-items: center;
+    }
     @include mq(u-sp) {
       height: auto;
     }
@@ -159,38 +170,12 @@
     }
   }
 
-  &__subList {
+  &__sns {
     @include mq(o-sp) {
+      display: flex;
     }
     @include mq(u-sp) {
       display: none;
-      font-family: "Noway-Light";
-      font-weight: normal;
-    }
-  }
-
-  &__listLink--first {
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-      background: url("#{$bgPath}icon-hamburger-white.png") no-repeat right
-        3.2vw center;
-      background-size: 6vw;
-      padding-right: 16vw;
-      &.is-open {
-        background: url("#{$bgPath}icon-close-white.png") no-repeat right 3.2vw
-          center;
-        background-size: 6vw;
-      }
-    }
-  }
-
-  &__sns{
-    @include mq(o-sp) {
-display: flex;
-    }
-    @include mq(u-sp) {
-display: none;
     }
   }
 }
