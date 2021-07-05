@@ -32,9 +32,6 @@
     color: #efefef;
     line-height: 17px;
 
-    &.is-active {
-      height: 0;
-    }
 
     @include mq(o-sp) {
     }
@@ -45,6 +42,10 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       background: #000;
+      
+    &.is-active {
+      height: 0;
+    }
     }
   }
 
