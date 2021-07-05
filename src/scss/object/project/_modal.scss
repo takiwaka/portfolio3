@@ -1,7 +1,7 @@
 .p-modal {
-  position: relative;
   background-color: #fff;
   @include mq(u-sp) {
+    position: relative;
   }
 
   &__contents {
