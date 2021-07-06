@@ -42,7 +42,7 @@
       flex-direction: row;
       padding: 0;
       flex-wrap: wrap;
-      justify-content: stretch;
+      justify-content:space-between ;
     }
     @include mq(u-sp) {
       position: relative;
