@@ -1,11 +1,11 @@
 .p-modal {
   background-color: #fff;
-      @include mq(o-sp) {
-    }
-   @include mq(u-sp) {
+  @include mq(o-sp) {
+  }
+  @include mq(u-sp) {
     position: relative;
   }
- 
+
   &__contents {
     @include mq(o-sp) {
       top: -150px;
@@ -37,7 +37,7 @@
   &__name {
     overflow: hidden;
     z-index: 1;
-    font-family: 'Noto Sans JP';
+    font-family: "Noto Sans JP";
     font-size: 11vw;
     line-height: 1;
     white-space: nowrap;
@@ -83,10 +83,10 @@
   }
 
   &__imageBox {
-    margin-top: 14vw;
     @include mq(o-sp) {
     }
     @include mq(u-sp) {
+      margin-top: 47px;
     }
   }
 
@@ -99,7 +99,7 @@
     }
     @include mq(u-sp) {
     }
-    
+
     &.is-active {
       opacity: 1;
     }
@@ -120,13 +120,13 @@
     li {
       position: relative;
       width: 100%;
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-    }
+      @include mq(o-sp) {
+      }
+      @include mq(u-sp) {
+      }
       &::after {
         position: absolute;
-bottom: 10px;
+        bottom: 10px;
         right: 0px;
         width: 20px;
         height: 25px;
@@ -149,13 +149,11 @@ bottom: 10px;
         cursor: pointer;
         outline: none;
         appearance: none;
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-    }
+        @include mq(o-sp) {
+        }
+        @include mq(u-sp) {
+        }
       }
     }
   }
 }
-
-
