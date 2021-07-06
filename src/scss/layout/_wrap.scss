@@ -3,4 +3,8 @@
   line-height: 1;
   height: 2000px;
   background-color: #000;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
 }
