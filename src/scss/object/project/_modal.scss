@@ -1,9 +1,11 @@
 .p-modal {
   background-color: #fff;
-  @include mq(u-sp) {
+      @include mq(o-sp) {
+    }
+   @include mq(u-sp) {
     position: relative;
   }
-
+ 
   &__contents {
     @include mq(o-sp) {
       top: -150px;
@@ -16,6 +18,10 @@
   }
   &__list {
     position: relative;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
   }
 
   &__textBox {
@@ -48,6 +54,10 @@
     display: inline-block;
     opacity: 0;
     transform: translateY(200px);
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
     &:first-child {
       transition: opacity 2s, transform 1s ease 0.2s;
     }
@@ -74,6 +84,10 @@
 
   &__imageBox {
     margin-top: 14vw;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
   }
 
   &__image {
@@ -81,6 +95,11 @@
     height: 90vh;
     object-fit: cover;
     transition: all 2s;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
+    
     &.is-active {
       opacity: 1;
     }
@@ -101,6 +120,10 @@
     li {
       position: relative;
       width: 100%;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
       &::after {
         position: absolute;
 bottom: 10px;
@@ -126,7 +149,13 @@ bottom: 10px;
         cursor: pointer;
         outline: none;
         appearance: none;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    }
       }
     }
   }
 }
+
+
