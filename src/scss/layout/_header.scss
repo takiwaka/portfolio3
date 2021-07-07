@@ -41,7 +41,6 @@
       display: flex;
       flex-direction: row;
       padding: 0;
-      flex-wrap: wrap;
     }
     @include mq(u-sp) {
       position: relative;
@@ -53,8 +52,10 @@
 
   &__logo {
     @include mq(o-sp) {
-      width: 30vw;
-      max-width: 250px;
+      img {
+        width: 250px;
+        height: 50px;
+      }
     }
     @include mq(u-sp) {
       width: 150px;
@@ -65,6 +66,8 @@
 
   &__navWrap {
     @include mq(o-sp) {
+      display: flex;
+      align-items: center;
       width: 500px;
     }
     @include mq(u-sp) {
@@ -127,6 +130,7 @@
   &__list {
     @include mq(o-sp) {
       display: flex;
+      flex-wrap: wrap;
     }
   }
 
@@ -134,10 +138,15 @@
     @include mq(o-sp) {
       font-size: 1.2rem;
       display: flex;
-      margin-right: 2.5%;
-      padding: 1rem;
+      padding: 0 0.5vw;
       justify-content: center;
       align-items: center;
+      flex-wrap: wrap;
+      font-family: "NotoSansJP-Thin";
+      font-size: 1rem;
+      &:last-child {
+        margin-right: 50px;
+      }
     }
     @include mq(u-sp) {
       height: auto;
@@ -177,7 +186,9 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      align-content: space-around;
       width: 50px;
+      height: 50px;
       justify-content: center;
     }
     @include mq(u-sp) {
@@ -186,10 +197,38 @@
   }
 
   &__snsItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
     width: 24px;
+    height: 25px;
     margin: 0 auto;
+
+    &:nth-child(-n + 2)::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      display: inline-block;
+      width: 70%;
+      height: 1px;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
+    &:nth-child(2n) ::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      display: inline-block;
+      width: 1px;
+      height: 70%;
+      transform: translateY(-50%);
+      background-color: rgba(255, 255, 255, 0.6);
+    }
   }
   a {
-    margin: 0 auto;
+    display: flex;
+    align-items: center;
   }
 }
