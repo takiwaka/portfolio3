@@ -84,6 +84,7 @@
 
   &__imageBox {
     @include mq(o-sp) {
+      margin-top:50px;
     }
     @include mq(u-sp) {
       margin-top: 47px;
