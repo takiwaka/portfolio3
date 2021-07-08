@@ -1,13 +1,12 @@
 <% var array=[
-  {'name':'KAZUYA','text':'のんびり今を生きています。','modalImage':'modal-01',},
-  {'name':'KAWAKITA','text':'のんびり今を生きています。','modalImage':'modal-01',},
-  {'name':'KAWAKITA','text':'のんびり今を生きています。','modalImage':'modal-01',},
-  {'name':'KAWAKITA','text':'のんびり今を生きています。','modalImage':'modal-01',},
+  {'name':'Marriage','text':'のんびり今を生きています。','modalImage':'modal-01',},
+  {'name':'Kazuya','text':'のんびり今を生きています。','modalImage':'modal-01',},
+  {'name':'Kawakita','text':'のんびり今を生きています。','modalImage':'modal-01',},
 ];%>
 
 <div class="p-modal">
   <ul class="p-modal__contents u-mb-0 slick slick-slider">
-    <% for (var key in array) { var name = array[key].name;%>
+    <% for (var key in array) {%>
     <li class="p-modal__list">
       <div class="p-modal__imageBox">
         <img class="p-modal__image jsc-modal"
@@ -16,26 +15,7 @@
       <div class="p-modal__textBox">
         <p class="p-modal__name">
           <span class="p-modal__character jsc-modal">
-            <%= name.charAt(0) %>
-          </span>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(1) %>
-          </span>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(2) %>
-          </span>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(3) %>
-          </span>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(4) %>
-          </span>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(5) %>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(6) %>
-          <span class="p-modal__character jsc-modal">
-            <%= name.charAt(7) %>
+            <%= array[key].name %>
           </span>
         </p>
       </div>
