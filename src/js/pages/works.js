@@ -10,10 +10,10 @@ $(function () {
     arrows: false,
     centerMode: true,
     centerPadding: '20%',
-    asNavFor: ".thumb",
+    asNavFor: ".slick-works-sub",
   });
 
-  $(".thumb").slick({
+  $(".slick-works-sub").slick({
     asNavFor: ".slick-works",
     focusOnSelect: true,
     slidesToShow: 3,

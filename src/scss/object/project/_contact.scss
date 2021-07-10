@@ -1,20 +1,41 @@
 .p-contact {
-  background-color: #efefef;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 50px  0;
+  background-color: #fff;
 
-  &__wrapper {
-    width: 800px;
+
+  &__title {
+    border: solid #000;
+    border-width: 0 0 2.4rem;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    font-family: "Noto Sans JP";
+    font-weight: 1000;
+    color: #000;
+    background-color: #fff;
+    line-height: 0.8;
+    text-align: center;
+    @include mq(o-sp) {
+      font-size:5rem;
+    }
+    @include mq(u-sp) {
+      font-size: 4rem;
+    }
+  }
+
+  &__inner {
+    width: 1800px;
     max-width: 100%;
-    height: auto;
-    min-height: 1264px;
+    min-height: 800px;
     margin: 0 auto;
     text-align: center;
   }
 
   &__content {
     background-color: #fff;
-    height: auto;
-    min-height: 912px;
-    padding-top: 52px;
   }
 
   &__input {
@@ -27,24 +48,6 @@
     font-weight: bold;
     width: 200px;
     margin: 0 auto;
-  }
-
-  &__required {
-    position: relative;
-    &::before {
-      width: 40px;
-      height: 23px;
-      position: absolute;
-      content: "必須";
-      left: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: #e81919;
-      color: #ffffff;
-      font-size: 14px;
-      line-height: 23px;
-      border-radius: 12px;
-    }
   }
 
   &__field {
@@ -73,7 +76,7 @@
   }
 
   &__textarea {
-    height: 240px;
+    height: 100px;
   }
 
   &__radio {
