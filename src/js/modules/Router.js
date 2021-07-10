@@ -1,5 +1,6 @@
 import 'slick-carousel';
 import modal from '../pages/modal'
+import works from '../pages/works'
 import toggle from '../pages/toggle'
 import pop from '../pages/pop'
 import load from '../pages/load'
@@ -18,6 +19,9 @@ export default class Router {
     switch (pathName) {
       case '/modal':
         new modal()
+        break
+      case '/works':
+        new works()
         break
       case '/toggle':
         new toggle()

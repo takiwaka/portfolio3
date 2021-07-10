@@ -4,11 +4,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 $(function () {
-  var $slick = $(".slick");
+  var $slickModal = $(".slick-modal");
 
-  $slick.on("init", function (event, slick) {
+  $slickModal.on("init", function (event, slick) {
     var slide = ".slick-slide";
-    $slick
+    $slickModal
       .find(slide)
       .eq(slick.currentSlide)
       .find(".jsc-modal")
@@ -16,18 +16,18 @@ $(function () {
       .removeClass("jsc-modal");
   });
 
-  $slick
+  $slickModal
     .slick({
       // autoplay: true,
       // autoplaySpeed: 5000,
       // speed:1000,
       arrows: false,
-      dots: true,
+      dots: false,
       dotsClass: "p-modal__dots",
       infinite: false,
     })
     .on("afterChange", function (event, slick, currentSlide) {
-      $slick
+      $slickModal
         .find(".slick-slide")
         .eq(currentSlide)
         .find(".jsc-modal")

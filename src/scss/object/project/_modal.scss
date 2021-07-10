@@ -17,10 +17,6 @@
   }
   &__list {
     position: relative;
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-    }
   }
 
   &__textBox {
