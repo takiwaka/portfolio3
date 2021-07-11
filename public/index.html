@@ -200,7 +200,7 @@
 </div>
 
 <div class="p-works">
-  <h2 class="p-works__title">WORKS</h2>
+  <h2 class="p-works__title">PAST<br>WORKS</h2>
   <div class="p-works__inner">
     <div class="p-works__contents">
       <ul class="p-works__list slick-works slick-slider">
@@ -221,7 +221,7 @@
         </li>
       </ul>
 
-      <div class="thumb">
+      <div class="p-works__subList slick-works-sub">
         <img src="assets/image/modal-01.jpg" alt="" />
         <img src="assets/image/modal-01.jpg" alt="" />
         <img src="assets/image/modal-01.jpg" alt="" />
@@ -232,22 +232,23 @@
 
 
         <div class="p-contact">
-          <div class="p-contact__wrapper">
 
-            <div class="p-contact__title">
-              <h1>Contact</h1>
-            </div>
+          <div class="p-contact__title">
+            <h1>CONTACT</h1>
+          </div>
+
+          <div class="p-contact__inner">
 
             <div class="p-contact__content">
               <div class="p-contact__input">
-                <div class="p-contact__inputTitle p-contact__required">
+                <div class="p-contact__inputTitle">
                   <p>お名前</p>
                 </div>
                 <input class="p-contact__field" placeholder="山田太郎" type="text" />
               </div>
 
               <div class="p-contact__input">
-                <div class="p-contact__inputTitle p-contact__required">
+                <div class="p-contact__inputTitle">
                   <p>メールアドレス</p>
                 </div>
                 <input class="p-contact__field" placeholder="text@example.com" type="mail" />
@@ -287,15 +288,29 @@
                 </label>
               </div>
 
+
               <div class="check">
                 <label>
-                  <input class="input-check" type="checkbox" /><span><a href="#">プライバシーポリシー</a>に合意する</span>
+                  <input class="input-check" type="checkbox"/>
+
+                  <span>
+                    <p class="jsc-pop-button p-contact__policy">プライバシーポリシー</p>
+                    に合意する
+
+                    <div class="c-pop jsc-pop-content">
+                      <div class="c-pop__bg jsc-pop-close"></div>
+                      <div class="c-pop__main">
+                        <p>プライバシーポリシー</p>
+                      </div>
+                    </div>
+
+                  </span>
                 </label>
               </div>
-
               <div class="btn">
                 <a href="#">送信する</a>
               </div>
+              
             </div>
           </div>
         </div>
@@ -303,10 +318,14 @@
 
 
 
+
   <footer class="l-footer">
 
+
+
+
   </footer>
+
   </div><!-- l-wrap -->
   <script type="text/javascript" src="assets/javascripts/bundle.js"></script></body>
-
   </html>

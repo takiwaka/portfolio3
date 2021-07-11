@@ -2,14 +2,12 @@
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 50px  0;
+  margin: 50px 0;
   background-color: #fff;
-
 
   &__title {
     border: solid #000;
-    border-width: 0 0 2.4rem;
-    display: inline-block;
+    border-width: 0 0 1rem;
     overflow: hidden;
     width: 100%;
     font-family: "Noto Sans JP";
@@ -18,11 +16,12 @@
     background-color: #fff;
     line-height: 0.8;
     text-align: center;
+    letter-spacing: -0.1em;
     @include mq(o-sp) {
-      font-size:5rem;
+      font-size: 8rem;
     }
     @include mq(u-sp) {
-      font-size: 4rem;
+      font-size: 5rem;
     }
   }
 
@@ -53,8 +52,6 @@
   &__field {
     width: 100%;
     max-width: 528px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
     appearance: none;
     background-color: transparent;
     background-image: none;
@@ -117,7 +114,6 @@
     height: 18px;
     left: -9px;
     opacity: 0;
-    // margin: 2px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -127,6 +123,10 @@
 
   &__radio:checked + span::after {
     opacity: 1;
+  }
+
+  &__policy {
+    text-decoration: underline;
   }
 
   .check {
@@ -149,14 +149,13 @@
   }
 
   .input-check + span::before {
-    -webkit-transform: translateY(-50%);
     background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.16);
+    border: 1px solid #000;
     border-radius: 2px;
     content: "";
     display: block;
-    left: -50px;
     position: absolute;
+    left: -50px;
     top: 50%;
     transform: translateY(-50%);
     width: 30px;
@@ -164,18 +163,21 @@
   }
 
   .input-check + span::after {
-    -webkit-transform: translateY(-50%);
-    content: url("../image/check.svg");
+    content: "";
     display: none;
+    background-image: url("../image/check.png");
+background-size: contain;
+vertical-align: middle;
     position: absolute;
-    left: -48px;
+    left: -50px;
     top: 50%;
+    width: 30px;
+    height: 30px;
     transform: translateY(-50%);
-    transition: all 0.3s ease 0s;
   }
 
   .input-check:checked + span::after {
-    display: block;
+    display: inline-block;
   }
 
   .btn {

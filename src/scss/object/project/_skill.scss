@@ -24,8 +24,7 @@
 
   &__title {
     border: solid #000;
-    border-width: 0 0 2.4rem;
-    display: inline-block;
+    border-width: 0 0 1rem;
     overflow: hidden;
     width: 100%;
     font-family: "Noto Sans JP";
@@ -34,6 +33,7 @@
     background-color: #fff;
     line-height: 0.8;
     text-align: center;
+    letter-spacing: -0.1em;
     @include mq(o-sp) {
       font-size: 15rem;
     }
@@ -48,6 +48,7 @@
     right: 0;
     color: #fff;
     text-align: right;
+    letter-spacing: -0.1em;
     @include mq(o-sp) {
       font-size: 10rem;
     }

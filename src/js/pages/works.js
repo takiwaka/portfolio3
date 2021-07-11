@@ -9,7 +9,7 @@ $(function () {
   $slickWorks.slick({
     arrows: false,
     centerMode: true,
-    centerPadding: '20%',
+    centerPadding: '10%',
     asNavFor: ".slick-works-sub",
   });
 
