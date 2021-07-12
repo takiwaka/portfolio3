@@ -35,10 +35,10 @@
     text-align: center;
     letter-spacing: -0.1em;
     @include mq(o-sp) {
-      font-size: 15rem;
+      font-size: 8rem;
     }
     @include mq(u-sp) {
-      font-size: 8rem;
+      font-size: 5rem;
     }
   }
 

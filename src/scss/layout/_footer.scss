@@ -1,12 +1,94 @@
 .l-footer {
+  background-color: #000;
+  color: #fff;
   @include mq(o-sp) {
-
   }
   @include mq(u-sp) {
-
   }
 
-  height: 500px;
-background-color: #000;
+  &__inner {
+    @include mq(o-sp) {
 
+    }
+    @include mq(u-sp) {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq(o-sp) {
+    }
+  }
+
+  &__listItem {
+    font-family: "NotoSansJP-Thin";
+    @include mq(o-sp) {
+      display: flex;
+      font-size: 8rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      &:last-child {
+        margin-right: 50px;
+      }
+    }
+    @include mq(u-sp) {
+      display: flex;
+      width: 50%;
+      font-size: 2rem;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__listLink {
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+    margin-top: 50px;
+    }
+  }
+
+  &__sns {
+    display: flex;
+    @include mq(o-sp) {
+    }
+    @include mq(u-sp) {
+      margin: 50px 0;
+      border-top: 1px solid #626262;
+      border-bottom: 1px solid #626262;
+    }
+  }
+
+  &__snsItem {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    height: 80px;
+    margin: 0 auto;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    @include mq(o-sp) {
+      img {
+        width: 250px;
+        height: 50px;
+      }
+    }
+    @include mq(u-sp) {
+      width: 100%;
+      padding-bottom: 50px;
+    }
+  }
 }

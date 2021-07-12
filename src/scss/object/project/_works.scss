@@ -17,10 +17,9 @@
     @include mq(o-sp) {
       position: absolute;
       top: 50%;
-      left: 5%;
       transform: translateY(-50%);
       writing-mode: vertical-rl;
-      line-height: 1;
+      line-height: 0.8;
       font-size: 8rem;
       font-weight: bold;
     }
@@ -36,11 +35,27 @@
         display: none;
       }
     }
+
+    &--left{
+      @include mq(o-sp) {
+        left: 0;
+      }
+    }
+
+    &--right{
+      @include mq(o-sp) {
+        right: 0;
+        margin-right: -10px;
+      }
+      @include mq(u-sp) {
+        display: none;
+      }
+    }
   }
 
   &__inner {
     @include mq(o-sp) {
-      margin: 0 0 0 auto;
+      margin: 0  auto;
       width: 500px;
       height: 375px;
     }
