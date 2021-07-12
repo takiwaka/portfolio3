@@ -21,7 +21,8 @@
     transition: all 0.3s ease 0s;
     color: #efefef;
     line-height: 17px;
-
+    text-align: center;
+    
     &.is-active {
       height: 0;
     }
