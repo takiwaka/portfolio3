@@ -76,111 +76,8 @@
     height: 100px;
   }
 
-  &__radio {
-    display: none;
-    font-weight: regular;
-  }
 
-  &__radio + span {
-    //input-radioの直後のspanを指定
-    cursor: pointer; //カーソルを指にするやつ
-    display: inline-block; //要素の並び方はinline的で、要素の中身はblock的な性質を持ちます。
-    margin: 50px 2em 0;
-    padding: 0 0 0 1.2em;
-    position: relative; //自身の位置を元いた場所から相対的な場所に指定する（ここでは子要素の開始位置を決めるために書いてある）
-  }
-
-  &__radio + span::before {
-    background: #ffffff;
-    border: 1px solid #707070;
-    border-radius: 50%;
-    content: ""; //擬似要素の内容を書く。今回は枠だけ使いたいから空白
-    display: block;
-    position: absolute; //自身の位置を左上からの絶対距離で指定する（親にrelativeがついてるので親の左上からスタート
-    left: -15px; //親枠の左上を起点として左に15px
-    top: 50%; //親枠の左上を起点として下に移動（親枠上下の中央に子の起点が来る）
-    transform: translateY(
-      -50%
-    ); //子が枠の半分だけ上に戻る（子上下の中央が親上下の中央に来る）
-    height: 30px;
-    width: 30px;
-  }
-
-  &__radio + span::after {
-    background: #000;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    content: "";
-    height: 18px;
-    left: -9px;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: all 0.3s ease 0s;
-    width: 18px;
-  }
-
-  &__radio:checked + span::after {
-    opacity: 1;
-  }
-
-  &__policy {
-    text-decoration: underline;
-  }
-
-  .check {
-    margin-top: 45px;
-  }
-
-  .input-check {
-    display: none;
-  }
-
-  .input-check + span {
-    cursor: pointer;
-    display: inline-block;
-    margin: 0 0;
-    padding: 0 0 0;
-    position: relative;
-    a {
-      border-bottom: 1px solid #333333;
-    }
-  }
-
-  .input-check + span::before {
-    background: #fff;
-    border: 1px solid #000;
-    border-radius: 2px;
-    content: "";
-    display: block;
-    position: absolute;
-    left: -50px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-  }
-
-  .input-check + span::after {
-    content: "";
-    display: none;
-    background-image: url("../image/check.png");
-background-size: contain;
-vertical-align: middle;
-    position: absolute;
-    left: -50px;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-    transform: translateY(-50%);
-  }
-
-  .input-check:checked + span::after {
-    display: inline-block;
-  }
-
-  .btn {
+  &__btn {
     margin-top: 3rem;
     width: 100%;
     p {
@@ -192,28 +89,6 @@ vertical-align: middle;
       border-radius: 12px;
       position: relative;
     }
-
-    p:after {
-      position: absolute;
-      content: "\f054";
-      font-family: "Font Awesome 5 Free";
-      font-size: 20px;
-      top: auto;
-      right: auto;
-      left: auto;
-      bottom: auto;
-      padding-left: 2rem;
-    }
   }
-}
-
-@media all and (min-width: 480px) {
-}
-
-@media all and (min-width: 768px) {
-  .contact-wrapper {
-    .container {
-      min-height: 1264px;
-    }
-  }
+  
 }
