@@ -183,7 +183,7 @@ vertical-align: middle;
   .btn {
     margin-top: 3rem;
     width: 100%;
-    a {
+    p {
       font-weight: bold;
       font-size: 20px;
       color: #ffffff;
@@ -193,7 +193,7 @@ vertical-align: middle;
       position: relative;
     }
 
-    a:after {
+    p:after {
       position: absolute;
       content: "\f054";
       font-family: "Font Awesome 5 Free";
