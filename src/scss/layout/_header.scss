@@ -21,13 +21,12 @@
     transition: all 0.3s ease 0s;
     color: #efefef;
     line-height: 17px;
-    text-align: center;
-    
+
     &.is-active {
       height: 0;
     }
-
     @include mq(o-sp) {
+      text-align: center;
     }
     @include mq(u-sp) {
       font-size: 10px;

@@ -2,13 +2,17 @@
   background-color: #000;
   color: #fff;
   @include mq(o-sp) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
   @include mq(u-sp) {
   }
 
   &__inner {
-    @include mq(o-sp) {
+    display: flex;
 
+    @include mq(o-sp) {
     }
     @include mq(u-sp) {
       position: relative;
@@ -26,16 +30,13 @@
   }
 
   &__listItem {
+    display: flex;
     font-family: "NotoSansJP-Thin";
     @include mq(o-sp) {
-      display: flex;
-      font-size: 8rem;
+      width: 25%;
+      font-size: 1rem;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
-      &:last-child {
-        margin-right: 50px;
-      }
     }
     @include mq(u-sp) {
       display: flex;
@@ -81,10 +82,7 @@
 
   &__logo {
     @include mq(o-sp) {
-      img {
-        width: 250px;
-        height: 50px;
-      }
+width: 25%;
     }
     @include mq(u-sp) {
       width: 100%;
