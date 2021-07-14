@@ -2,7 +2,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 50px 0 0 0;
+  margin: 10vh 0 0 0;
   text-align: left;
   background-repeat: no-repeat;
   background-position: top;
@@ -58,17 +58,24 @@
     line-height: 0.75;
   }
 
+
   &__content {
-    position: absolute;
-    bottom: 10px;
-    right: 2vw;
+    @include mq(o-sp) {
+      position: absolute;
+      bottom: 15px;
+      left: 5vw;
+    }
+    @include mq(u-sp) {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
-&__bg{
-      background-image: url("#{$bgPath}img-skill.jpg");
-    width: 100vh;
-    height:100vh;
-    background-position: top;
+
+  &__bg {
+    background-image: url("#{$bgPath}skill-pop.jpg");
+    background-position: center;
     background-size: cover;
-
+  }
 }
-

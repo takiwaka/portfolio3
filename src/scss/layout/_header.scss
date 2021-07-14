@@ -3,14 +3,9 @@
   top: 0;
   z-index: 1;
   width: 100%;
-  background-color: #000;
   padding: 0;
   color: #fff;
-  @include mq(o-sp) {
-  }
-  @include mq(u-sp) {
-    min-width: auto;
-  }
+  background-color: #000;
 
   &__description {
     font-size: 1rem;
@@ -18,19 +13,20 @@
     width: 100%;
     height: 17px;
     padding: 0 20px;
-    transition: all 0.3s ease 0s;
     color: #efefef;
     line-height: 17px;
+    transition: all 0.3s ease 0s;
 
     &.is-active {
       height: 0;
     }
+
     @include mq(o-sp) {
       text-align: center;
     }
     @include mq(u-sp) {
+      padding-left: 10px;
       font-size: 10px;
-      padding: 0 10px;
       white-space: nowrap;
       text-overflow: ellipsis;
     }
@@ -113,7 +109,6 @@
     }
     @include mq(u-sp) {
       position: absolute;
-
       overflow: hidden;
       width: 100%;
       height: 0;
@@ -137,14 +132,13 @@
 
   &__listItem {
     @include mq(o-sp) {
-      font-size: 1.2rem;
       display: flex;
-      padding: 0 0.5vw;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      flex-wrap: wrap;
+      padding: 0 0.5vw;
       font-family: "NotoSansJP-Thin";
-      font-size: 1rem;
+      font-size: 1.2rem;
       &:last-child {
         margin-right: 50px;
       }
@@ -158,24 +152,24 @@
     @include mq(o-sp) {
     }
     @include mq(u-sp) {
-      color: #fff;
+      position: relative;
       display: block;
+      width: 100%;
+      padding: 4vw 4vw 4vw 14vw;
+      color: #fff;
       font-size: 4.5vw;
       letter-spacing: 0.1vw;
-      max-width: 100%;
-      padding: 3.33333vw 4vw 3.33333vw 13.33333vw;
-      position: relative;
-      width: 100%;
 
       &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5vw;
+        transform: translateY(-50%);
+        width: 4.8vw;
+        height: 5vw;
         background: url("#{$bgPath}icon-arrow.png") no-repeat;
         background-size: 4.8vw 5vw;
-        content: "";
-        height: 5vw;
-        left: 5.33333333vw;
-        position: absolute;
-        top: calc(50% - 2.5vw);
-        width: 4.8vw;
       }
     }
   }
@@ -188,10 +182,10 @@
       flex-wrap: wrap;
       align-items: center;
       align-content: space-around;
+      justify-content: center;
       width: 50px;
       height: 50px;
-      justify-content: center;
-      color: #626262;
+      color: $colorGray;
     }
     @include mq(u-sp) {
       display: none;
@@ -211,10 +205,10 @@
       position: absolute;
       left: 50%;
       bottom: 0;
+      transform: translateX(-50%);
       display: inline-block;
       width: 70%;
       height: 1px;
-      transform: translateX(-50%);
       background-color: rgba(255, 255, 255, 0.6);
     }
     &:nth-child(2n) ::after {
@@ -222,10 +216,10 @@
       position: absolute;
       left: 0;
       top: 50%;
+      transform: translateY(-50%);
       display: inline-block;
       width: 1px;
       height: 70%;
-      transform: translateY(-50%);
       background-color: rgba(255, 255, 255, 0.6);
     }
   }

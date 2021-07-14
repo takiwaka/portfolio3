@@ -1,30 +1,11 @@
-  
-<% var linkArray=[
-  {'link':'#about','name':'ABOUT',},
-  {'link':'#skill','name':'SKILL',},
-  {'link':'#works','name':'WORKS',},
-  {'link':'#contact','name':'CONTACT',},
-];%>
-
-  
-<% var snsArray=[
-  {'link':'https://www.youtube.com/','name':'youtube',},
-  {'link':'https://www.instagram.com/','name':'instagram',},
-  {'link':'https://www.facebook.com/','name':'facebook-f',},
-  {'link':'https://twitter.com/','name':'twitter',},
-];%>
-
-
 <header class="l-header">
   <h1 class="l-header__description jsc-scroll-hide">
-    河北一也のポートフォリオ
+    こちらは河北一也のポートフォリオです
   </h1>
+
   <div class="l-header__inner">
     <a href="#" class="l-header__logo">
-      <img
-        src="assets/image/logo.png"
-        alt="河北ポートフォリオロゴ"
-      />
+      <img src="assets/image/logo.png" alt="河北ポートフォリオロゴ" />
     </a>
 
     <div class="l-header__navWrap">
@@ -44,32 +25,29 @@
         "
         alt="メニューを閉じる"
       />
-
       <nav class="l-header__nav jsc-nav-wrap-main">
         <ul class="l-header__list">
-
-    <% for (var key in linkArray) {%>
-           <li class="l-header__listItem jsc-nav-close">
-            <a href="<%= linkArray[key].link %>" class="l-header__listLink"><%= linkArray[key].name %></a>
+          <% for (var key in linkArray) {%>
+          <li class="l-header__listItem jsc-nav-close">
+            <a href="<%= linkArray[key].link %>" class="l-header__listLink">
+              <%= linkArray[key].name %>
+            </a>
           </li>
-    <% } %>
-
+          <% } %>
         </ul>
       </nav>
     </div>
 
-        <ul class="l-header__sns">
-            <% for (var key in snsArray) {%>
-
-          <li class="l-header__snsItem">
-            <a href="<%= snsArray[key].link %>">
-              <i class="fab fa-<%= snsArray[key].name %>"></i>
-            </a>
-          </li>
-    <% } %>
-
-        </ul>
-        <!-- l-header__sns -->
+    <ul class="l-header__sns">
+      <% for (var key in snsArray) {%>
+      <li class="l-header__snsItem">
+        <a href="<%= snsArray[key].link %>">
+          <i class="fab fa-<%= snsArray[key].name %>"></i>
+        </a>
+      </li>
+      <% } %>
+    </ul>
+    <!-- l-header__sns -->
   </div>
   <!-- l-header__inner -->
 </header>

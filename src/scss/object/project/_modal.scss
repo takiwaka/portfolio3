@@ -1,5 +1,7 @@
 .p-modal {
-  background-color: #fff;
+  background-color: $colorWhite;
+  color: $colorWhite;
+
   @include mq(o-sp) {
     margin-top: 50px;
   }
@@ -27,34 +29,27 @@
     @include mq(u-sp) {
       bottom: 20%;
       right: 10%;
-      color: #000;
     }
   }
 
   &__name {
     z-index: 1;
-    font-size: 11vw;
-    line-height: 1;
     white-space: nowrap;
     font-family: "CastroScript_PERSONAL_USE_ONLY";
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-    }
+    line-height: 1;
+    font-size: 11vw;
   }
 
   &__character {
     display: inline-block;
     opacity: 0;
-    transition: opacity 2s, transform 1s ease 0.2s;
+
     &.is-active {
       opacity: 1;
     }
   }
 
   &__imageBox {
-    @include mq(o-sp) {
-    }
     @include mq(u-sp) {
       margin-top: 47px;
     }
@@ -64,12 +59,7 @@
     opacity: 0;
     object-fit: cover;
     transition: all 2s;
-    @include mq(o-sp) {
-      height: 80vh;
-    }
-    @include mq(u-sp) {
-      height: 90vh;
-    }
+    height: 90vh;
 
     &.is-active {
       opacity: 1;
@@ -98,14 +88,14 @@
       }
       &::after {
         position: absolute;
-        bottom: 20px;
         right: 0px;
+        bottom: 20px;
         width: 20px;
         height: 25px;
         background-image: url("#{$bgPath}dot-black.png");
-        content: "";
         background-size: contain;
         background-repeat: no-repeat;
+        content: "";
       }
       &.slick-active {
         &::after {
@@ -121,10 +111,6 @@
         cursor: pointer;
         outline: none;
         appearance: none;
-        @include mq(o-sp) {
-        }
-        @include mq(u-sp) {
-        }
       }
     }
   }

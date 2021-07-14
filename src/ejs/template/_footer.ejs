@@ -1,67 +1,38 @@
+<footer class="l-footer">
+  <div class="l-footer__inner">
 
-  <footer class="l-footer">
-
-    <div class="l-footer__inner">
-
-      <ul class="l-footer__list">
-        <li class="l-footer__listItem">
-          <a href="" class="l-footer__listLink">ABOUT</a>
-        </li>
-
-        <li class="l-footer__listItem">
-          <a href="" class="l-footer__listLink">SKILL</a>
-        </li>
-
-        <li class="l-footer__listItem">
-          <a href="" class="l-footer__listLink">WORKS
+    <ul class="l-footer__list">
+      <% for (var key in linkArray) {%>
+        <li class="l-footer__listItem jsc-nav-close">
+          <a href="<%= linkArray[key].link %>">
+            <%= linkArray[key].name %>
           </a>
         </li>
-        
-        <li class="l-footer__listItem">
-          <a href="" class="l-footer__listLink">CONTACT</a>
-        </li>
+        <% } %>
+    </ul>
+
+    <div class="l-footer__others">
+
+      <ul class="l-footer__sns">
+        <% for (var key in snsArray) {%>
+          <li class="l-footer__snsItem">
+            <a href="<%= snsArray[key].link %>">
+              <i class="fab fa-<%= snsArray[key].name %>"></i>
+            </a>
+          </li>
+          <% } %>
       </ul>
-      <div class="l-footer__others">
 
-        <ul class="l-footer__sns">
-          <li class="l-footer__snsItem">
-            <a href="">
-              <i class="fab fa-2x fa-youtube"></i>
-            </a>
-          </li>
-          
-          <li class="l-footer__snsItem">
-            <a href="">
-              <i class="fab fa-2x fa-instagram"></i>
-            </a>
-          </li>
-          
-          <li class="l-footer__snsItem">
-            <a href="">
-              <i class="fab fa-2x fa-facebook-f"></i>
-            </a>
-          </li>
-          
-          <li class="l-footer__snsItem">
-            <a href="">
-              <i class="fab fa-2x fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
-        <p class="l-footer__copy u-hidden-sp">Copyright © 2021 K.KAWAKITA</p>
-      </div>
-        
-      <!-- l-footer__sns -->
-
+      <p class="l-footer__copy u-hidden-sp">Copyright © 2021 K.KAWAKITA</p>
     </div>
-      <a href="#" class="l-footer__logo">
-        <img
-          src="assets/image/logo.png"
-          alt=""
-        />
-      </a>
-      <p class="l-footer__copy u-hidden-pc">Copyright © 2021 K.KAWAKITA</p>
-  </footer>
+
+    <!-- l-footer__sns -->
+  </div>
+  <a href="#" class="l-footer__logo">
+    <img src="assets/image/logo.png" alt="" />
+  </a>
+  <p class="l-footer__copy u-hidden-pc">Copyright © 2021 K.KAWAKITA</p>
+</footer>
 
 </div><!-- l-wrap -->
 </body>

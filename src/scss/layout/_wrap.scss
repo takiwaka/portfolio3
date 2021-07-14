@@ -1,10 +1,6 @@
 .l-wrap {
   margin: 0 auto;
   line-height: 1;
-  // height: 2000px;
+  color: $colorWhite;
   background-color: #000;
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-    }
 }

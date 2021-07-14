@@ -1,27 +1,23 @@
 .l-footer {
-  background-color: #000;
-  color: #fff;
+  margin-top: 50px;
   @include mq(o-sp) {
-    padding: 50px 0 20px;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    padding-bottom: 20px;
   }
   @include mq(u-sp) {
   }
 
   &__inner {
     display: flex;
-
     @include mq(o-sp) {
-      width: 75%;
       flex-wrap: wrap;
+      width: 75%;
     }
     @include mq(u-sp) {
-      position: relative;
       display: block;
       width: 100%;
-      height: auto;
     }
   }
 
@@ -29,7 +25,7 @@
     display: flex;
     flex-wrap: wrap;
     @include mq(o-sp) {
-      width: 100%;
+      width: 75%;
     }
   }
 
@@ -39,28 +35,21 @@
     @include mq(o-sp) {
       width: 25%;
       font-size: 1rem;
-      justify-content: center;
-      align-items: center;
     }
     @include mq(u-sp) {
-      display: flex;
       width: 50%;
       font-size: 2rem;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
-    }
-  }
-
-  &__listLink {
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-      margin-top: 50px;
+      &:nth-child(n+3) {
+        margin-top: 50px;
+      }
     }
   }
 
   &__others {
+    color: $colorGray;
     @include mq(o-sp) {
       display: flex;
       width: 100%;
@@ -68,56 +57,54 @@
   }
 
   &__sns {
-    color: #626262;
     display: flex;
     @include mq(o-sp) {
       justify-content: flex-start;
-      width: 85%;
+      width: 75%;
       margin: 50px 0;
     }
     @include mq(u-sp) {
       margin: 50px 0;
-      border-top: 1px solid #626262;
-      border-bottom: 1px solid #626262;
+      border-top: 1px solid $colorGray;
+      border-bottom: 1px solid $colorGray;
     }
   }
 
   &__snsItem {
-    position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
     width: 25%;
-    height: 80px;
-    margin: 0 auto;
-    a {
-      display: flex;
-      align-items: center;
+
+    @include mq(u-sp) {
+      justify-content: center;
+      height: 80px;
     }
   }
 
   &__copy {
-    color: #626262;
+    font-size: 0.8rem;
+    color: $colorGray;
+    text-align: center;
     @include mq(o-sp) {
       display: flex;
-      width: 15%;
+      width: 25%;
       align-items: center;
-      font-size: 0.8rem;
     }
     @include mq(u-sp) {
-      text-align: center;
     }
   }
 
   &__logo {
-    display: block;
     @include mq(o-sp) {
       display: flex;
       align-items: center;
       width: 25%;
+      margin-right: 5vw;
     }
     @include mq(u-sp) {
+      display: block;
       width: 100%;
-      padding-bottom: 50px;
+      margin-bottom: 50px;
     }
   }
 }
