@@ -8,10 +8,10 @@
 
   
 <% var snsArray=[
-  {'link':'#about','name':'ABOUT',},
-  {'link':'#skill','name':'SKILL',},
-  {'link':'#works','name':'WORKS',},
-  {'link':'#contact','name':'CONTACT',},
+  {'link':'https://www.youtube.com/','name':'youtube',},
+  {'link':'https://www.instagram.com/','name':'instagram',},
+  {'link':'https://www.facebook.com/','name':'facebook-f',},
+  {'link':'https://twitter.com/','name':'twitter',},
 ];%>
 
 
@@ -48,7 +48,7 @@
       <nav class="l-header__nav jsc-nav-wrap-main">
         <ul class="l-header__list">
 
-    <% for (var key in array) {%>
+    <% for (var key in linkArray) {%>
            <li class="l-header__listItem">
             <a href="<%= linkArray[key].link %>" class="l-header__listLink"><%= linkArray[key].name %></a>
           </li>
@@ -59,29 +59,15 @@
     </div>
 
         <ul class="l-header__sns">
-          <li class="l-header__snsItem">
-            <a href="https://www.youtube.com/">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </li>
+            <% for (var key in snsArray) {%>
 
           <li class="l-header__snsItem">
-            <a href="https://www.instagram.com/">
-              <i class="fab fa-instagram"></i>
+            <a href="<%= snsArray[key].link %>">
+              <i class="fab fa-<%= snsArray[key].name %>"></i>
             </a>
           </li>
+    <% } %>
 
-          <li class="l-header__snsItem">
-            <a href="https://www.facebook.com/">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </li>
-
-          <li class="l-header__snsItem">
-            <a href="https://twitter.com/">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
         </ul>
         <!-- l-header__sns -->
   </div>
