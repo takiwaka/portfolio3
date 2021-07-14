@@ -21,5 +21,12 @@
   transform: translate(-50%, -50%);
   z-index:9999;
   background-color: #fff;
+
+  
+      @include mq(o-sp) {
   padding: 0px;
+    }
+    @include mq(u-sp) {
+
+    }
 }
