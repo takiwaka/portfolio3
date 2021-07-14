@@ -22,7 +22,7 @@ $(function () {
       // autoplaySpeed: 5000,
       // speed:1000,
       arrows: false,
-      dots: false,
+      dots: true,
       dotsClass: "p-modal__dots",
       infinite: false,
     })
