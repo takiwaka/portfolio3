@@ -13,7 +13,8 @@
   align-items: baseline;
 
   &::after {
-    content: "";
+        background: url("#{$bgPath}btn-arrow.png") no-repeat;
+       background-size: 5vw 5vw;
     line-height: 1;
     overflow: hidden;
     width: 0;
