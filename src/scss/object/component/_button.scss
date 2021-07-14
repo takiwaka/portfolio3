@@ -11,7 +11,7 @@
   transition: all 0.3s ease-in-out 0s;
 
   @include mq(o-sp) {
-    width:40vw;
+    width: 40vw;
     max-width: 400px;
     padding: 20px 10px 19px;
   }
@@ -29,7 +29,8 @@
     background: url("#{$bgPath}btn-arrow.png") no-repeat;
     background-size: 1rem 1rem;
     background-position: center;
-    transition: transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s,width 0.15s ease-out 0.05s;
+    transition: transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s,
+      width 0.15s ease-out 0.05s;
     transform: translateX(-50%);
     opacity: 0;
   }
@@ -44,5 +45,4 @@
       transform: translateX(0);
     }
   }
-
 }

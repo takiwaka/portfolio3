@@ -4,11 +4,8 @@
   overflow: hidden;
   margin: 10vh 0;
   text-align: left;
-  background-color: #fff;
-  @include mq(o-sp) {
-  }
-  @include mq(u-sp) {
-  }
+  color: $colorBlack;
+  background-color:  $colorWhite;
 
   &__title {
     text-align: center;
@@ -24,11 +21,11 @@
       font-weight: bold;
     }
     @include mq(u-sp) {
-      font-size: 5rem;
-      border: solid #000;
-      border-width: 0 0 1rem;
       overflow: hidden;
       width: 100%;
+      font-size: 5rem;
+      border: solid $colorBlack;
+      border-width: 0 0 1rem;
       font-weight: 1000;
       line-height: 0.8;
       br {
@@ -55,9 +52,9 @@
 
   &__inner {
     @include mq(o-sp) {
-      margin: 0  auto;
       width: 500px;
       height: 375px;
+      margin: 0  auto;
     }
     @include mq(u-sp) {
       width: 100%;
@@ -67,22 +64,10 @@
   &__contents {
     width: 100%;
     height: 100%;
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-      width: 100%;
-    }
   }
 
   &__list {
     line-height: 0;
-    @include mq(o-sp) {
-    }
-    @include mq(u-sp) {
-    }
-  }
-
-  &__item {
   }
 
   &__subList {
