@@ -8,7 +8,8 @@ https://takiwaka.github.io/portfolio3/public/index.html
 
 仮想時ポート：8082
 
-##今回実装した事
+## 今回実装した事
+
 webpack(yarn)を用いた開発
 
 ejsを活用したテンプレート運用
