@@ -35,6 +35,7 @@ module.exports = (env, argv) => {
         template: 'src/ejs/index.ejs',
       }),
 
+
       // php
       new CopyWebpackPlugin(
         PRODUCTION
